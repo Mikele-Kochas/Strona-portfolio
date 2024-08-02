@@ -37,3 +37,172 @@ header::before {
     content: "";
     position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons a {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 12px; /* Zwiększony margines */
+    display: inline-block;
+}
+
+.cta-buttons a:hover {
+    background-color: #ab47bc;
+    transform: scale(1.05);
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project a {
+    display: block;
+    margin-top: 8px;
+    color: #6a1b9a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    color: #ab47bc;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ab47bc;
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.contact-info a, .footer-content a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-info a:hover, .footer-content a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #6a1b9a; /* Dodano kolor dla paska nawigacyjnego */
+    height: 50px; /* Wysokość paska nawigacyjnego */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .cta-buttons a {
+        padding: 10px 15px;
+        font-size: 0.8em;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    form input, form textarea {
+        padding: 6px;
+    }
+
+    form input[type="submit"] {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+}
