@@ -2,12 +2,12 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4; /* Jasnoszare tło */
+    background: #f4f4f4;
     color: #333;
 }
 
 header, footer {
-    background-color: #2e2e2e; /* Ciemnoszary */
+    background-color: #2e2e2e;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
@@ -26,9 +26,9 @@ header {
     color: #ffffff;
     padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(to right, rgba(25, 25, 25, 0.8), rgba(45, 45, 45, 0.8)), url('path-to-your-image.jpg'); /* Bardziej ciemnoszary gradient */
+    background: linear-gradient(to right, rgba(25, 25, 25, 0.8), rgba(45, 45, 45, 0.8)), url('path-to-your-image.jpg');
     background-size: cover;
-    background-attachment: fixed; /* Efekt parallax */
+    background-attachment: fixed;
     background-position: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -37,167 +37,3 @@ header::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Ciemniejszy overlay dla lepszej czytelności tekstu */
-    z-index: 1;
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
-}
-
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em; /* Zmniejszenie czcionki nagłówka */
-    margin: 0;
-    color: #ffffff; /* Biały kolor tekstu */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-header p {
-    font-size: 1.2em; /* Zmniejszenie czcionki podtytułu */
-    margin-top: 10px;
-    color: #ffffff; /* Biały kolor tekstu */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.cta-buttons {
-    margin-top: 20px;
-}
-
-.cta-buttons a {
-    background-color: #6a1b9a; /* Jaśniejszy fiolet */
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 20px; /* Zmniejszenie paddingu */
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
-    margin: 0 8px; /* Zmniejszenie marginesu */
-    display: inline-block;
-}
-
-.cta-buttons a:hover {
-    background-color: #ab47bc; /* Magenta z odcieniem różu */
-    transform: scale(1.05);
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-.project {
-    margin-bottom: 20px;
-}
-
-.project a {
-    display: block;
-    margin-top: 8px; /* Zmniejszenie marginesu */
-    color: #6a1b9a; /* Jaśniejszy fiolet */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project a:hover {
-    color: #ab47bc; /* Magenta z odcieniem różu */
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 8px; /* Zmniejszenie paddingu */
-    margin-bottom: 12px; /* Zmniejszenie marginesu */
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-form input[type="submit"] {
-    background-color: #6a1b9a; /* Jaśniejszy fiolet */
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    padding: 12px; /* Zmniejszenie paddingu */
-    font-size: 0.9em; /* Zmniejszenie rozmiaru czcionki */
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-form input[type="submit"]:hover {
-    background-color: #ab47bc; /* Magenta z odcieniem różu */
-    transform: scale(1.05);
-}
-
-footer {
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #ffffff; /* Biały kolor dla linków w stopce */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.contact-info a, .footer-content a {
-    color: #ffffff; /* Biały kolor dla linków */
-    text-decoration: none;
-}
-
-.contact-info a:hover, .footer-content a:hover {
-    color: #ffffff; /* Biały kolor po najechaniu */
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    .cta-buttons a {
-        padding: 10px 15px; /* Zmniejszenie paddingu */
-        font-size: 0.8em; /* Zmniejszenie rozmiaru czcionki */
-    }
-
-    form {
-        padding: 10px;
-    }
-
-    form input, form textarea {
-        padding: 6px; /* Zmniejszenie paddingu */
-    }
-
-    form input[type="submit"] {
-        padding: 10px;
-        font-size: 0.8em; /* Zmniejszenie rozmiaru czcionki */
-    }
-}
