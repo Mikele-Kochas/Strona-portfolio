@@ -51,6 +51,9 @@ header p {
 
 .cta-buttons {
     margin-top: 20px;
+    display: flex; /* Użycie Flexbox */
+    justify-content: center; /* Wyśrodkowanie przycisków */
+    gap: 10px; /* Odstęp między przyciskami */
 }
 
 .cta-buttons a {
@@ -62,8 +65,8 @@ header p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
-    margin: 0 10px;
     display: inline-block;
+    flex: 1; /* Wypełnienie dostępnej przestrzeni */
 }
 
 .cta-buttons a:hover {
@@ -228,10 +231,15 @@ footer a:hover {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column; /* Przycisk jeden pod drugim */
+        align-items: center; /* Wyśrodkowanie przycisków */
+    }
+    
     .cta-buttons a {
         padding: 8px 16px;
         font-size: 14px;
-        margin: 5px;
+        margin-bottom: 10px; /* Odstęp między przyciskami */
     }
     
     .contact-info {
