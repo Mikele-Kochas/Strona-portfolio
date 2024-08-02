@@ -51,14 +51,14 @@ header::before {
 
 header h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em; /* Zmniejszenie czcionki nagłówka */
     margin: 0;
     color: #ffffff; /* Biały kolor tekstu */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-    font-size: 1.5em;
+    font-size: 1.2em; /* Zmniejszenie czcionki podtytułu */
     margin-top: 10px;
     color: #ffffff; /* Biały kolor tekstu */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -72,12 +72,12 @@ header p {
     background-color: #6a1b9a; /* Jaśniejszy fiolet */
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 25px;
+    padding: 12px 20px; /* Zmniejszenie paddingu */
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
-    margin: 0 10px;
+    margin: 0 8px; /* Zmniejszenie marginesu */
     display: inline-block;
 }
 
@@ -100,7 +100,7 @@ section {
 
 .project a {
     display: block;
-    margin-top: 10px;
+    margin-top: 8px; /* Zmniejszenie marginesu */
     color: #6a1b9a; /* Jaśniejszy fiolet */
     text-decoration: none;
     font-weight: bold;
@@ -127,8 +127,8 @@ form label {
 
 form input, form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
+    padding: 8px; /* Zmniejszenie paddingu */
+    margin-bottom: 12px; /* Zmniejszenie marginesu */
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
@@ -139,8 +139,8 @@ form input[type="submit"] {
     color: #ffffff;
     border: none;
     cursor: pointer;
-    padding: 15px;
-    font-size: 1em;
+    padding: 12px; /* Zmniejszenie paddingu */
+    font-size: 0.9em; /* Zmniejszenie rozmiaru czcionki */
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -155,18 +155,37 @@ footer {
     text-align: center;
 }
 
+footer a {
+    color: #ffffff; /* Biały kolor dla linków w stopce */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.contact-info a, .footer-content a {
+    color: #ffffff; /* Biały kolor dla linków */
+    text-decoration: none;
+}
+
+.contact-info a:hover, .footer-content a:hover {
+    color: #ffffff; /* Biały kolor po najechaniu */
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
     }
 
     header p {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .cta-buttons a {
-        padding: 10px 20px;
-        font-size: 0.9em;
+        padding: 10px 15px; /* Zmniejszenie paddingu */
+        font-size: 0.8em; /* Zmniejszenie rozmiaru czcionki */
     }
 
     form {
@@ -174,11 +193,11 @@ footer {
     }
 
     form input, form textarea {
-        padding: 8px;
+        padding: 6px; /* Zmniejszenie paddingu */
     }
 
     form input[type="submit"] {
         padding: 10px;
-        font-size: 0.9em;
+        font-size: 0.8em; /* Zmniejszenie rozmiaru czcionki */
     }
 }
