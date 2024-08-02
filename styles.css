@@ -56,6 +56,7 @@ header p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px; /* Dodaj przerwę między przyciskami */
 }
 
 .cta-buttons a {
@@ -67,10 +68,8 @@ header p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
-    margin: 10px; /* Zmieniony margines */
-    flex: 1 1 100%; /* Pełna szerokość na mniejszych ekranach */
-    max-width: calc(50% - 20px); /* Maksymalna szerokość przycisku */
     text-align: center;
+    flex: 1 1 calc(50% - 20px); /* Ustaw maksymalną szerokość przycisku */
 }
 
 .cta-buttons a:hover {
@@ -227,7 +226,7 @@ footer a:hover {
 @media (max-width: 768px) {
     .cta-buttons {
         flex-direction: column;
-        align-items: center; /* Wyśrodkowanie przycisków */
+        align-items: center;
     }
 
     .cta-buttons a {
