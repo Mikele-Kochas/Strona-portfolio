@@ -16,6 +16,9 @@ header {
     background-attachment: fixed; /* Efekt parallax */
     background-position: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box; /* Upewnienie się, że padding i border są uwzględniane w szerokości */
+    margin: 0 auto;
 }
 
 header::before {
