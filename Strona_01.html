@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Michał Kocher</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4; /* Jasnoszare tło */
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(to right, rgba(25, 25, 25, 0.8), rgba(45, 45, 45, 0.8)), url('path-to-your-image.jpg'); /* Bardziej ciemnoszary gradient */
+            background-size: cover;
+            background-attachment: fixed; /* Efekt parallax */
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Ciemniejszy overlay dla lepszej czytelności tekstu */
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            margin: 0;
+            color: #ffffff; /* Biały kolor tekstu */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #ffffff; /* Biały kolor tekstu */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .cta-buttons a {
+            background-color: #6a1b9a; /* Jaśniejszy fiolet */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 0 10px;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #ab47bc; /* Magenta z odcieniem różu */
+            transform: scale(1.1);
+        }
+
+        .contact-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ffffff;
+            z-index: 2;
+            text-align: right;
+        }
+
+        .contact-info p {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #6a1b9a; /* Jaśniejszy fiolet */
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #ab47bc; /* Magenta z odcieniem różu */
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-bottom: 2px solid #6a1b9a; /* Linia pod nagłówkiem */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            margin-top: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .project a {
+            display: block;
+            margin-top: 10px;
+            color: #6a1b9a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project a:hover {
+            color: #ab47bc;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label, input, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #3a0a6a; /* Ciemniejszy fiolet */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 15px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6a1b9a; /* Jaśniejszy fiolet */
+        }
+
+        footer {
+            background-color: #2e2e2e; /* Ciemnoszary */
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 10px;
+            }
+            section {
+                padding: 20px;
+                margin-bottom: 40px;
+            }
+            .contact-info {
+                position: static;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:michalkocher24@gmail.com">michalkocher24@gmail.com</a></p>
+        <p>Telefon: <a href="tel:+48724540406">724 540 406</a></p>
+    </div>
+    <div class="header-content">
+        <h1>Michał Kocher</h1>
+        <p>Strona portfolio</p>
+        <div class="cta-buttons">
+            <a href="#about">Dowiedz się więcej</a>
+            <a href="#contact">Skontaktuj się</a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <!-- Pasek nawigacyjny bez przycisków -->
+</nav>
+
+<main>
+    <section id="about">
+        <h2>O mnie</h2>
+        <p>Jestem studentem Politechniki Śląskiej na kierunku Technologie Kognitywne i Media Społecznościowe. Interesuję się programowaniem, zwłaszcza korzystając z języka Python i narzędzi oferowanych przez OpenAI.</p>
+        <p>Najbardziej ciekawi mnie, jak technologie AI mogą być używane w aplikacjach edukacyjnych. Pracuję nad projektami, które mają na celu ułatwienie nauki i poprawę efektywności edukacji przy użyciu nowoczesnych narzędzi.</p>
+        <p>Obecnie skupiam się na rozwijaniu swoich umiejętności w programowaniu i odkrywaniu nowych technologii, aby tworzyć ciekawe i przydatne rozwiązania dla użytkowników.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projekty</h2>
+        <div class="project">
+            <h3>Kalkulator statystyczny</h3>
+            <p>Był to mój pierwszy program który napisałem, aby poćwiczyć budowę aplikacji bez pomocy YouTube czy wykładowców na uczelni. Po podaniu listy liczb wyświetla ile razy każda z nich występuje w liście. Dodatkowo wylicza średnią arytmetyczną, harmoniczną oraz geometryczną, znajduje medianę oraz odczytuje wartości na pierwszym i trzecim kwartylu. Działa jako strona internetowa dzięki bibliotece streamlit.</p>
+            <a href="https://github.com/Mikele-Kochas/Kalkukator_Statystyczny" target="_blank">Zobacz na GitHubie</a>
+            <a href="https://kalkukatorstatystyczny-gbed8yqy465ae4vis2zy5d.streamlit.app/" target="_blank">Zobacz na StreamlitShare</a>
+        </div>
+        <div class="project">
+            <h3>Fiszkomat</h3>
+            <p>Jest to eksperymentalny projekt, którym starałem się nauczyć z korzystania API OpenAI we własnych projektach. Przy użyciu Modelu GPT-4o-mini generuje listy słów w języku niemieckim. Wykorzystuje gTTX do tworzenia nagrań z wymową, oraz wyświetla tłumaczenia w języku polski. Również opiera się o bibliotekę Streamlit.</p>
+            <a href="https://github.com/Mikele-Kochas/Fiszkomat" target="_blank">Zobacz na GitHubie</a>
+            <a href="https://fiszkomat-lnyyaeaq3bjjzyj76srd8x.streamlit.app/" target="_blank">Zobacz na StreamlitShare</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form action="https://formspree.io/f/mwpeorde" method="POST">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Wiadomość</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <input type="submit" value="Wyślij">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>Kontakt mailowy: <a href="mailto:michalkocher24@gmail.com">michalkocher24@gmail.com</a></p>
+        <p>Kontakt telefoniczny: <a href="tel:+48724540406">724 540 406</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
